@@ -1,0 +1,81 @@
+@sliderHeight: 550px;
+#header-1 {
+    .navbar {
+        border-radius: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        height: 80px;
+        div {
+            height: 100%;
+            .navbar-brand {
+                height: 100%;
+                display: table-cell !important;
+                vertical-align: middle;
+                h2 {
+                    font-weight: bolder;
+                }
+            }
+        }
+        .navbar-collapse {
+            margin-top: 1%;
+        }
+        @media screen and (max-width: 750px) {
+            height: 60px;
+        }
+    }
+    .header-slider {
+        clear: both;
+        padding: 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                position: relative;
+                width: 100%;
+                height: @sliderHeight;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                list-style-type: none;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: @sliderHeight;
+                    z-index: 5;
+                }
+                .slider-content {
+                    position: absolute;
+                    width: 100%;
+                    top: 25%;
+                    left: 0;
+                    z-index: 10;
+                    color: white;
+                    h2 {
+                        font-size: 4em;
+                        font-weight: bolder;
+                    }
+                    .btn-in-slider {
+                        color: white;
+                        font-size: 1.5em;
+                        padding: 10px 25px;
+                        background: transparent;
+                        border: 2px solid white;
+                        margin-top: 1em;
+                        margin-left: .5em;
+                        &:hover {
+                            background: white;
+                            color: black;
+                        }
+                    }
+                    @media screen and (max-width: 750px) {
+                        top: 10%;
+                        width: 80%;
+                        margin: 0 10%;
+                    }
+                }
+            }
+        }
+    }
+}
