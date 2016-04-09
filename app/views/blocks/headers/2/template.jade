@@ -1,0 +1,60 @@
+link(rel='stylesheet', href='./css/headers/2/styling.css')
+
+header(data-block="header" id="header-2")
+    .row
+        .col-xs-12
+            .header-slider
+                ul.slider-wrapper
+                    li
+                        .slider-content
+                            h2 Buy something amazing
+                            p.lead Lorizzle sheezy fo shizzle mah nizzle fo rizzle, mah home g-dizzle check out this amizzle, ma nizzle adipiscing
+                            a.btn.btn-in-slider(href="") Buy product now
+                        img.img-responsive(src="https://unsplash.it/1080/720/?image=1031")
+                    li
+                        .slider-content
+                            h2 Buy something amazing
+                            p.lead Lorizzle sheezy fo shizzle mah nizzle fo rizzle, mah home g-dizzle check out this amizzle, ma nizzle adipiscing
+                            a.btn.btn-in-slider(href="") Buy product now
+                        img.img-responsive(src="https://unsplash.it/1080/720/?image=1032")
+                    li
+                        .slider-content
+                            h2 Buy something amazing
+                            p.lead Lorizzle sheezy fo shizzle mah nizzle fo rizzle, mah home g-dizzle check out this amizzle, ma nizzle adipiscing
+                            a.btn.btn-in-slider(href="") Buy product now
+                        img.img-responsive(src="https://unsplash.it/1080/720/?image=1033")
+
+        .col-xs-12
+            nav.navbar.navbar-inverse(style="border-radius: 0")
+                .container-fluid
+                    .navbar-header
+                        button(type="button" datta-toggle="collapsed" data-target="#header-2" aria-expanded="false").navbar-toggle.collapsed
+                            span.sr-only Toggle Navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a(href="https://github.com/kn9ts/start-to-gulp").navbar-brand
+                            img.img-responsive(alt="Site logo" src="./images/Logo-Y.png")
+                            //- | LiteSpace
+
+                    .collapse.navbar-collapse(id="header-2")
+                        ul.nav.navbar-nav.navbar-right
+                            li.active: a(href='#') Home
+                            li: a(href='#') About
+                            li: a(href='#') Team
+                            li: a(href='#') Pricing
+                            li: a(href='#') Gallery
+                            li: a(href='#') Contact Us
+
+
+script(type="text/javascript").
+    // Listen for the event
+    document.querySelector('#header-2').addEventListener('jqueryLoaded', function(e) {
+        $('#header-2 .header-slider').unslider({
+            autoplay: true,
+            arrows: false,
+            // Make "false" when only one slide has been given
+            // infinite: true,
+            nav: false
+        });
+    }, false);
