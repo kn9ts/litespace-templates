@@ -1,0 +1,46 @@
+link(rel='stylesheet', href='./css/headers/4/styling.css')
+
+header(data-block="header" id="header-4")
+    nav.navbar(style="border-radius: 0")
+        .container-fluid
+            .navbar-header
+                button(type="button" datta-toggle="collapsed" data-target="#header-4" aria-expanded="false").navbar-toggle.collapsed
+                    span.sr-only Toggle Navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a(href="https://github.com/kn9ts/start-to-gulp").navbar-brand
+                    img(alt="Site logo" src="./images/Logo-Y.png")
+                    //- img(alt="Site logo" src="./images/html5logos/white.png")
+                    //- | LiteSpace
+
+            .collapse.navbar-collapse(id="header-4")
+                ul.nav.navbar-nav.navbar-right
+                    li.active: a(href='#') Home
+                    li: a(href='#') About
+                    li: a(href='#') Team
+                    li: a(href='#') Pricing
+                    li: a(href='#') Gallery
+                    li: a(href='#') Contact Us
+
+    .header-slider.col-xs-12.text-center
+        ul.slider-wrapper
+            li
+                .slider-content
+                    h2 Buy something amazing
+                    p.lead Lorizzle sheezy fo shizzle mah nizzle fo rizzle, mah home g-dizzle check out this amizzle, ma nizzle adipiscing
+                    a.btn.btn-in-slider(href="") Buy product now
+                img.img-responsive(src="https://unsplash.it/1080/720/?image=1031")
+
+
+script(type="text/javascript").
+    // Listen for the event.
+    document.querySelector('#header-4').addEventListener('jqueryLoaded', function(e) {
+        $('#header-4 .header-slider').unslider({
+            autoplay: true,
+            arrows: false,
+            // Make "false" when only one slide has been given
+            // infinite: true,
+            nav: false
+        });
+    }, false);
