@@ -31,12 +31,15 @@ const plugins = loadGulpPlugins();
 var paths = {
   images: 'app/images/**/*',
   jade: [
+    'app/views/**/*.jade',
+    '!app/views/blocks/**/*.jade',
     '!app/views/layouts/*.jade',
-    '!app/views/includes/*.jade',
-    'app/views/**/*.jade'
+    '!app/views/includes/*.jade'
   ],
   styles: [
     'app/styles/less/*.+(less|css)',
+    'app/views/blocks/**/*.+(less|css)',
+    '!app/styles/less/blocks/*.+(less|css)',
     '!app/styles/less/layouts/*.+(less|css)',
     '!app/styles/less/base/*.+(less|css)'
   ],
@@ -167,3 +170,4 @@ gulp.task('heroku:staging', ['build']);
 
 // for tests
 gulp.task('test', ['test:fend', 'test:bend' /*, 'e2e' */ ]);
+
